@@ -1,41 +1,26 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 export default function Header() {
   return (
     <header
       style={{
         background: 'var(--preto)',
-        padding: '2.5rem 1.5rem 2rem',
+        padding: '1.8rem 1.5rem',
         textAlign: 'center',
         borderBottom: '1px solid var(--dourado)',
       }}
     >
       <Link to="/">
-        <h1
+        <img
+          src={logo}
+          alt="Studio Sophie Boutique"
           style={{
-            margin: 0,
-            fontFamily: 'var(--serif)',
-            fontStyle: 'italic',
-            fontWeight: 500,
-            fontSize: 'clamp(1.8rem, 5vw, 2.6rem)',
-            color: 'var(--cream)',
-            letterSpacing: '1px',
+            width: 'clamp(110px, 18vw, 150px)',
+            height: 'auto',
+            display: 'inline-block',
           }}
-        >
-          Studio Sophie
-        </h1>
-        <p
-          style={{
-            margin: '0.3rem 0 0',
-            fontFamily: 'var(--sans)',
-            fontSize: '0.7rem',
-            letterSpacing: '4px',
-            textTransform: 'uppercase',
-            color: 'var(--dourado-claro)',
-          }}
-        >
-          Boutique
-        </p>
+        />
       </Link>
     </header>
   );
